@@ -1,0 +1,43 @@
+#Análisis de datos de pacientes coronarios
+
+#Importar fichero desde excel
+library(readxl)
+coronarios <- read_excel("mare/cursos/rotacion_EIR/coronarios.xls")
+
+#ver estructura
+str(coronarios)
+
+#visualización de los primeros 6 casos
+head(coronarios)
+
+#resumen global de variables
+summary(coronarios)
+
+#selección de casos con enfermedad
+coronariosE<-coronarios[coronarios$enfermed=="Sí",]
+
+#t de Student para variables cuantitativas
+t.test(pas~enfermed, data=coronarios)
+t.test(pad~enfermed, data=coronarios)
+t.test(edad~enfermed, data=coronarios)
+t.test(colest~enfermed, data=coronarios)
+
+#chi cuadrado para variables cualitativas
+tab_obesid<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_obesid, correct=FALSE)
+
+tab_tabaco<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_tabaco, correct=FALSE)
+
+tab_cafe<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_cafe, correct=FALSE)
+
+tab_alcohol<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_alcohol, correct=FALSE)
+
+tab_antec<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_antec, correct=FALSE)
+
+tab_estres<-xtabs(~obesid+enfermed, data=coronarios)
+chisq.test(tab_estres, correct=FALSE)
+
