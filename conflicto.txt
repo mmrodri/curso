@@ -11,7 +11,7 @@ str(coronarios)
 head(coronarios)
 
 #resumen global de variables
-summary(coronarios)
+summary(coronarios) #frecuencias y percentiles
 
 #selección de casos con enfermedad
 coronariosE<-coronarios[coronarios$enfermed=="Sí",]
