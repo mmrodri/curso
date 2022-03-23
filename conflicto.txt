@@ -11,10 +11,10 @@ str(coronarios)
 head(coronarios)
 
 #resumen global de variables
-summary(coronarios) #frecuencias y percentiles
+summary(coronarios)
 
 #selección de casos con enfermedad
-coronariosE<-coronarios[coronarios$enfermed=="Sí",]
+coronarios[coronarios$enfermed=="Sí",]
 
 #t de Student para variables cuantitativas
 t.test(pas~enfermed, data=coronarios)
