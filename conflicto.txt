@@ -14,7 +14,7 @@ head(coronarios)
 summary(coronarios)
 
 #selección de casos con enfermedad
-coronarios[coronarios$enfermed=="Sí",]
+coronariosE<-coronarios[coronarios$enfermed=="Sí",]
 
 #t de Student para variables cuantitativas
 t.test(pas~enfermed, data=coronarios)
