@@ -2,5 +2,3 @@
 #se ha creado la rama1 dentro de curso con el parámetro -b
 
 #en rama1 se crea este fichero.txt
-
-#este nuevo fichero esta en la subrama metarama que está dentro de rama1
